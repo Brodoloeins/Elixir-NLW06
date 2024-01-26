@@ -5,7 +5,9 @@ Uma API chamada Wabanex
 
 - A API tem como funcionalidade fazer uma ligação de um sistema de uma academia, desenvolvida em Elixir com o Banco de Dados Postgres
 
-## Docs de códigos da API
+## Docs da API
+
+<a href="#users">Users</a>
 
 ## Users
 
