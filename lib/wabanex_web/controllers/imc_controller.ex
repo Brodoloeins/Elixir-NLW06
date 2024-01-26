@@ -4,17 +4,19 @@ defmodule WabanexWeb.IMCController do
   alias Wabanex.IMC
 
   def index(conn, params) do
-    #params
-    #|> IMC.calculate()
+    params
+    |> IMC.calculate()
+    |> handle_response(conn)
 
-    IO.inspect(params)
-    IO.inspect(conn)
-
-    conn
-    |> text("teste")
   end
 
-  def handle_response() do
+  defp handle_response({:ok, result}, conn),  do: render_response(conn,result,:ok)
 
+  defp handle_response({:error, result}, conn),  do: render_response(conn,result,:bad_request)
+
+  defp render_response(conn, result, status) do
+    conn
+    |> put_status(status)
+    |> json(%{result: result})
   end
 end
