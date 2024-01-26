@@ -7,7 +7,7 @@ Uma API chamada Wabanex
 
 ## Docs de códigos da API
 
-### >> Users
+## Users
 
 ### >> Parâmetros
 
