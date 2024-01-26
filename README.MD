@@ -9,7 +9,7 @@ Uma API chamada Wabanex
 
 ### >> Users
 
-#### >> Parâmetros
+### >> Parâmetros
 
 - ID (Auto Generated com UUID)
 - Name, mínimo de 2 letras
@@ -17,16 +17,16 @@ Uma API chamada Wabanex
 - Email, Primary Key(Não pode ter repetido no DB)
 - Data (Auto Generated)
 
-#### >> Criação
+### >> Criação
 <b>Wabanex.Users.Create.call(</b>Necessita de todos os parametros que não são Auto Generated<b>)</b>, caso não seja válido, o retorno é o padrão do Repo
 
-#### >> Leitura 
+### >> Leitura 
 <b>Wabanex.Users.Create.call(</b>Necessita de um UUID cadastrado no Banco de Dados<b>)</b>
 - caso não seja válido, por não estar cadastrado a resposta trará {:error, "User not found"}
 - caso não seja um UUID válido o retorno será {:error, "invalid UUID"} 
 - caso a resposta seja valida o retorno será {:ok, user} o user em JSON
 
-#### >> Exclusão 
+### >> Exclusão 
 <b></b> 
 
 #### >> Update 
