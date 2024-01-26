@@ -1,0 +1,20 @@
+defmodule WabanexWeb.IMCController do
+  use WabanexWeb, :controller
+
+  alias Wabanex.IMC
+
+  def index(conn, params) do
+    #params
+    #|> IMC.calculate()
+
+    IO.inspect(params)
+    IO.inspect(conn)
+
+    conn
+    |> text("teste")
+  end
+
+  def handle_response() do
+
+  end
+end
