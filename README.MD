@@ -20,10 +20,15 @@ Uma API chamada Wabanex
 - Data (Auto Generated)
 
 ### >> Criação
-<b>Wabanex.Users.Create.call(</b>Necessita de todos os parametros que não são Auto Generated<b>)</b>, caso não seja válido, o retorno é o padrão do Repo
+```elixir 
+Wabanex.Users.Create.call(email, password, name)
+```
+- caso não seja válido, o retorno é o padrão do Repo
 
 ### >> Leitura 
-<b>Wabanex.Users.Create.call(</b>Necessita de um UUID cadastrado no Banco de Dados<b>)</b>
+```elixir
+Wabanex.Users.Create.call(id)
+```
 - caso não seja válido, por não estar cadastrado a resposta trará {:error, "User not found"}
 - caso não seja um UUID válido o retorno será {:error, "invalid UUID"} 
 - caso a resposta seja valida o retorno será {:ok, user} o user em JSON
